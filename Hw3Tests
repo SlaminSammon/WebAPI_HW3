@@ -1,0 +1,124 @@
+{
+	"id": "c2c19f2d-e8ea-3c56-b108-5209e692154d",
+	"name": "HW3",
+	"description": "",
+	"order": [
+		"74857502-f2ea-7cbc-439c-d759f0d781a0",
+		"e25f6fcf-e339-5740-3c03-b34b9cbcf21b",
+		"7f25d8ae-d1be-4f40-c734-e62538b38e3b",
+		"7bb1c1bd-0f3d-6f83-c07b-75879ef6b209"
+	],
+	"folders": [],
+	"timestamp": 1458406014837,
+	"owner": "301278",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "74857502-f2ea-7cbc-439c-d759f0d781a0",
+			"headers": "",
+			"url": "https://slamminsammons-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c2c19f2d-e8ea-3c56-b108-5209e692154d",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "ZixugD7zyrUgpCkkaDcyz96pws9PMCnv",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "fveBXrxUjAbLshXG",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "Generate access token",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1458406014837,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7bb1c1bd-0f3d-6f83-c07b-75879ef6b209",
+			"headers": "Authorization: Bearer failure\n",
+			"url": "https://slamminsammons-test.apigee.net/gets",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "c2c19f2d-e8ea-3c56-b108-5209e692154d",
+			"data": [],
+			"dataMode": "params",
+			"name": "Bad access token",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1458406542649,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7f25d8ae-d1be-4f40-c734-e62538b38e3b",
+			"headers": "",
+			"url": "https://slamminsammons-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c2c19f2d-e8ea-3c56-b108-5209e692154d",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "failure",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "failure",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "Bad client id and secret",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1458406362072,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "e25f6fcf-e339-5740-3c03-b34b9cbcf21b",
+			"headers": "Authorization: Bearer DmykJqChexs6vVPQcyqV2G7nL0Al\n",
+			"url": "https://slamminsammons-test.apigee.net/gets",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "c2c19f2d-e8ea-3c56-b108-5209e692154d",
+			"data": [],
+			"dataMode": "params",
+			"name": "Main flow(Need to generate new token)",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1458406046251,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
